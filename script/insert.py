@@ -1,4 +1,5 @@
 import csv
+import os
 import psycopg
 import time
 
@@ -13,7 +14,11 @@ with open("data/sensor_readings.csv","r") as file :
 
 #-1-connect with db
 conn = psycopg.connect(
-    "dbname=test user=postgres password=Re7ab95 host=localhost port=5432"
+    host=os.getenv("PGHOST", "localhost"),
+    port=os.getenv("PGPORT", "5432"),
+    dbname=os.getenv("PGDATABASE", "sensors"),
+    user=os.getenv("PGUSER", "postgres"),
+    password=os.getenv("PGPASSWORD"),
 )
 #2- creat cursor : A tool used to execute SQL commands and retrieve results
 cur = conn.cursor()

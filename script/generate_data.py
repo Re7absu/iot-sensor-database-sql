@@ -2,7 +2,7 @@ import csv
 import random
 from datetime import datetime, timedelta
 
-with open("sensor_readings.csv", "w", newline="") as file:
+with open("data/sensor_readings.csv", "w", newline="") as file:
     writer = csv.writer(file)
 
     start_time = datetime(2026, 1, 1)

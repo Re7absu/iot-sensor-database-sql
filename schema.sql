@@ -39,7 +39,7 @@ CREATE TABLE alerts (
     user_id INT, 
     message_at TIMESTAMP NOT NULL , 
 
-    FOREIGN KEY(camera_id) REFERENCES cameras(id)
+    FOREIGN KEY(camera_id) REFERENCES cameras(id),
     FOREIGN KEY(user_id) REFERENCES users(id)
 );
 
