@@ -52,7 +52,7 @@ flowchart LR
 ## Project Structure
 
 ```text
-sql-practice/
+iot-sensor-database-sql/
 ├── schema.sql                 # table definitions
 ├── seed.sql                   # loads data/*.csv (except sensor readings)
 ├── ERD.png                    # schema diagram
@@ -72,8 +72,8 @@ sql-practice/
 Requirements: PostgreSQL (with `psql`) and Python 3.12+.
 
 ```bash
-git clone https://github.com/Re7absu/sql-practice.git
-cd sql-practice
+git clone https://github.com/Re7absu/iot-sensor-database-sql.git
+cd iot-sensor-database-sql
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
@@ -125,3 +125,7 @@ All commands are run from the repository root.
 - Add indexes on `sensor_readings (camera_id, recorded_at)` and compare query plans with `EXPLAIN ANALYZE`.
 - Finish the open questions in `queries.sql` (average temperature and humidity).
 - Add time-series queries: hourly averages, rolling windows and threshold-based alert detection.
+
+## License
+
+Released under the [MIT License](LICENSE).
